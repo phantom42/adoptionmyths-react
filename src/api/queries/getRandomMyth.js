@@ -3,7 +3,9 @@ export async function getRandomMyth() {
 	const headers = {
 		"x-api-key": apiKey	
 	}
-	const res = await fetch('/api/myths/random', {method: 'GET', headers: headers});
+	const url = import.meta.env.VITE_API_URL + '/api/myths/random';
+	console.log(url);
+	const res = await fetch(url, {method: 'GET', headers: headers});
 	const data = await res.json();
 
 	return data;
