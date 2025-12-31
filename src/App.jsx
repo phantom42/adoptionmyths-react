@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import RandomMythPage from './pages/RandomMyth/RandomMythPage';
 import { randomMythLoader } from './pages/RandomMyth/randomMythLoader';
+import { getRandomMythListLoader } from './pages/RandomMyth/randomMythListLoader';	
 
 const router = createBrowserRouter([
 	{
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
 			{
 				index:true,
 				element: <RandomMythPage />,
-				loader: randomMythLoader
+				loader: getRandomMythListLoader//randomMythLoader
 			}
 		]
 	}
