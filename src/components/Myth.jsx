@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { FaLink } from 'react-icons/fa';
 export default function Myth({myth}) {
 	return (
 		<>
