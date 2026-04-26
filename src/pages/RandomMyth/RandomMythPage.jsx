@@ -6,6 +6,10 @@ export default function RandomMythPage() {
 	const {randomMythList} = useLoaderData();
 	const [mythIndex, setMythIndex] = useState(0);
 	const [autoAdvance, setAutoAdvance] = useState(import.meta.env.VITE_AUTOADVANCE);
+	// eslint-disable-next-line no-unused-vars
+	const toggleAutoAdvance = () => {
+		setAutoAdvance(!autoAdvance);
+	}
 	const nextMyth = (e) => {
 		if (e) {
 			e.preventDefault();
@@ -25,10 +29,9 @@ export default function RandomMythPage() {
 		return () => clearTimeout(timer);
 	});
 
-	
 	const randomMyth = randomMythList[mythIndex];
 	return (
-		<div>
+		<div className="flex items-center h-screen">
 			<DebunkedMyth debunkedMyth={randomMyth} nextMyth={nextMyth} prevMyth={prevMyth}/>
 			
 		</div>

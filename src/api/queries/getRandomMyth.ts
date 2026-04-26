@@ -1,4 +1,5 @@
-export async function getRandomMyth() {
+import { Myth } from "@/types/myth";
+export async function getRandomMyth(): Promise<Myth[]> {
 	const apiKey = import.meta.env.VITE_API_KEY;
 	const headers = {
 		"x-api-key": apiKey	
