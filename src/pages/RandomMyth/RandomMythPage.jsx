@@ -7,7 +7,7 @@ export default function RandomMythPage() {
 	//const {randomMyth} = useLoaderData() ;
 	const {randomMythList} = useLoaderData();
 	const [mythIndex, setMythIndex] = useState(0);
-	const [autoAdvance, setAutoAdvance] = useState(import.meta.env.VITE_AUTOADVANCE);
+	const [autoAdvance, setAutoAdvance] = useState(import.meta.env.VITE_AUTOADVANCE === 'true');
 	// eslint-disable-next-line no-unused-vars
 	const toggleAutoAdvance = () => {
 		setAutoAdvance(!autoAdvance);
@@ -38,12 +38,12 @@ export default function RandomMythPage() {
 				<div className="w-full max-w-200">
 					<DebunkedMyth debunkedMyth={randomMyth} nextMyth={nextMyth} prevMyth={prevMyth}/>
 					<Link to="/the-answer/" className="solution-link italic font-bold cursor-pointer">
-						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Answer?</span></h1>
+						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Answer?</span> <span className="answer-link"> →</span></h1>
 					</Link>
 				</div>
 			</div>
 			<div className="w-full max-w-200 mx-auto">
-				<SocialLinks />
+				<SocialLinks displayDebunk={false}/>
 			</div>
 		</div>
 	)

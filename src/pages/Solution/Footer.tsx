@@ -3,8 +3,8 @@ import SocialLinks from "../../components/SocialLinks";
 export default function Footer() {
 	return (
 		<article id="footer">
-			<header>The answers exist. They always have.</header>
-			<p>The question is whether or not people are ready to listen.</p>
+			<header>Listen to adoptees</header>
+			{/* <p>Listen To Adoptees</p> */}
 			<section>
 				<ul>
 					<li>#AdopteeRights</li>
@@ -13,7 +13,7 @@ export default function Footer() {
 					<li>#AdopteeVoices</li>
 				</ul>
 			</section>
-			<SocialLinks />
+			<SocialLinks displayDebunk={true} />
 		</article>
 	)
 }

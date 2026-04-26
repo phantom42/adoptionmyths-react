@@ -192,6 +192,12 @@ li::marker{
 	margin: 1em 0em;
 	color: var(--main-text-color);
 }
-.social-links a {
+.social-links a,
+.social-links .back-link {
 	color: var(--box-text-color);
+	transition: color 0.2s;
+}
+.social-links a:hover,
+.social-links .back-link:hover {
+	color: var(--main-text-highlight);
 }

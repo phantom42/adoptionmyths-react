@@ -2,12 +2,13 @@ import Fact from "./Fact";
 import Myth from "./Myth";
 import { Link } from "react-router-dom";
 
-export default function DebunkedMyth({debunkedMyth, nextMyth = ()=> {}}) {
+export default function DebunkedMyth({debunkedMyth, nextMyth = ()=> {}, prevMyth= () => {}, displayNext = true}) {
 	return (
 		<article className="box mythbox" style={{padding: '2em'}}>
 			<Myth myth={debunkedMyth.myth} slug={debunkedMyth.slug}/>
 			<Fact fact={debunkedMyth.fact}/>
 			<div className="flex justify-between items-center pt-5">
+
 				{debunkedMyth?.moreinfo ? (
 					<a
 						href={debunkedMyth.moreinfo}
@@ -21,6 +22,20 @@ export default function DebunkedMyth({debunkedMyth, nextMyth = ()=> {}}) {
 						Learn more about this fact
 					</a>
 				) : <span />}
+			</div>
+			<div className="flex justify-between items-center pt-5">
+				{displayNext && 
+				<Link
+				to="/"
+				onClick={prevMyth}
+				className="italic font-bold cursor-pointer"
+				style={{color: 'var(--box-text-color)'}}
+				onMouseEnter={e => e.target.style.color = 'var(--main-text-highlight)'}
+				onMouseLeave={e => e.target.style.color = 'var(--box-text-color)'}
+			>
+				← Previous Myth 
+			</Link>}
+				{displayNext && 
 				<Link
 					to="/"
 					onClick={nextMyth}
@@ -31,6 +46,7 @@ export default function DebunkedMyth({debunkedMyth, nextMyth = ()=> {}}) {
 				>
 					Debunk another myth →
 				</Link>
+				}
 			</div>
 		</article>
 	)
