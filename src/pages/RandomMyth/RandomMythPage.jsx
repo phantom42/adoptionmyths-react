@@ -20,7 +20,7 @@ export default function RandomMythPage() {
 	}
 	const prevMyth = (e) => {
 		e.preventDefault();
-		setMythIndex( (mythIndex > 0) ? mythIndex - 1: mythIndex.length - 1);
+		setMythIndex( (mythIndex > 0) ? mythIndex - 1: randomMythList.length - 1);
 	}
 	useEffect(() => {
 		const timer = setTimeout(()=> {
