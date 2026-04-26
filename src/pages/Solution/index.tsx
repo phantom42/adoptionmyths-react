@@ -6,7 +6,7 @@ import Prevention from "./Prevention"
 import Footer from "./Footer"
 export default function Solution() {
 	return (
-		<div className="container max-w-200 mx-auto">
+		<div className="max-w-200 mx-auto">
 			<Headline />
 			<Principle />
 			<Reform />

@@ -52,6 +52,13 @@ h2 {
 	margin: 1em 0em;
 	border-radius: 0 4px 4px 0;
 }
+.mythbox {
+	border-radius: 4px;
+	border-left: none;
+}
+.factbox {
+	border-left: 3px solid var(--border-color);
+}
 #principle p {
 	color: var(--main-text-color);
 	font-family: var(--fancy-font);
@@ -158,10 +165,17 @@ li::marker{
 	color: var(--main-text-em);
 }
 
+.solution-link {
+	color: var(--box-text-color);
+}
+.solution-link:hover,
+.solution-link:hover span {
+	color: white;
+}
 .credit {
 	margin: 1em 0em;
 	color: var(--main-text-color);
 }
-#footer a {
+.social-links a {
 	color: var(--box-text-color);
 }

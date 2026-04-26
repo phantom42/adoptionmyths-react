@@ -1,8 +1,8 @@
 export default function Fact({fact}) {
 	return (
-		<div className="text-2xl bg-blue-500 rounded p-2">
-			<span className="font-bold">Fact: </span>
-			<span className="italic">{fact}</span>
+		<div className="box factbox text-2xl">
+			<span className="font-bold" style={{color: 'var(--main-text-highlight)'}}>Fact: </span>
+			<span className="italic" style={{color: 'var(--main-text-color)'}}>{fact}</span>
 		</div>
 	)
 }

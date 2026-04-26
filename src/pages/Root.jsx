@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 console.log(import.meta.env.MODE);
 export default function Root(){
 	return (
-		<div className="flex mx-auto bg-blue=500">
+		<div>
 			<Outlet />
 		</div>
 	)

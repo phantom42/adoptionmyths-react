@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa"
+import SocialLinks from "../../components/SocialLinks";
 
 export default function Footer() {
 	return (
@@ -13,13 +13,7 @@ export default function Footer() {
 					<li>#AdopteeVoices</li>
 				</ul>
 			</section>
-			<div className="flex items-center justify-end gap-4 mt-4">
-				<a href="https://facebook.com/phantomadoptee" target="_blank"><FaFacebook /></a>
-				<a href="https://instagram.com/phantomadoptee" target="_blank"><FaInstagram /></a>
-				<a href="https://tiktok.com/@phantomadoptee" target="_blank"><FaTiktok /></a>
-				<span className="credit">@phantomAdoptee</span>
-			</div>
-
+			<SocialLinks />
 		</article>
 	)
 }
