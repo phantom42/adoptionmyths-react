@@ -20,14 +20,14 @@
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--main-background: #f5f2ee;
-		--alt-background: #ece8e2;
+		--main-background: #d6d2cc;
+		--alt-background: #ccc8c2;
 		--main-text-color: #1a1a2e;
 		--main-headline-color: #b91c1c;
 		--main-text-highlight: #c2622a;
 		--main-text-em: #c2410c;
 		--article-header-color: #b91c1c;
-		--box-background: #e8e2da;
+		--box-background: #c8c3bb;
 		--box-text-color: #4a4a6a;
 		--box-text-highlight: #2e2e50;
 		--border-color: #c2622a;

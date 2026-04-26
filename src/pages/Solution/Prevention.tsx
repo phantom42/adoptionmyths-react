@@ -6,7 +6,7 @@ export default function Prevention() {
 			<section id="pills">
 				<div>
 					<header>Universal basic Income</header>
-					<p>Economic security for families</p>
+					<p>Financial security for families</p>
 				</div>
 				<div>
 					<header>Universal Healthcare</header>
