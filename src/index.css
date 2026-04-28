@@ -114,6 +114,7 @@ h2 {
 #reform section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	column-gap: 1em;
 }
 #reform li {
 	display: flex;
@@ -147,7 +148,7 @@ li::marker{
 	display: flex;
 	flex-direction: column;
 	background-color: var(--box-background);
-	border-radius: 5em;
+	border-radius: 3em;
 	margin: 0em 1em 1em 0em;
 	text-align: center;
 	padding: 1em;
@@ -200,4 +201,49 @@ li::marker{
 .social-links a:hover,
 .social-links .back-link:hover {
 	color: var(--main-text-highlight);
+}
+.has-tooltip {
+	position: relative;
+	width: fit-content;
+	border-bottom: 1px dashed var(--main-text-highlight);
+}
+.has-tooltip::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 100%;
+	margin-left: 15px;
+	width: 300px;
+	padding: .5em;
+	border-radius: 10px;
+	background: var(--box-background);
+	color: var(--border-color);
+	text-align: center;
+	display: none;
+	z-index: 1;
+}
+.has-tooltip:nth-child(even)::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: unset;
+	right: 100%;
+	margin-left: 0;
+	margin-right: 15px;
+	width: 300px;
+	padding: .5em;
+	border-radius: 10px;
+	background: var(--box-background);
+	color: var(--border-color);
+	text-align: center;
+	display: none;
+	z-index: 1;
+}
+.has-tooltip:hover::after, .has-tooltip:active::after{
+	display: block;
+}
+.has-tooltip:hover, .has-tooltip:active  {
+	cursor: pointer;
 }
