@@ -1,27 +1,17 @@
-import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react";
-import { getMyth } from "../../api/queries/getMyth";
+import { Myth } from "@/types/myth";
 import DebunkedMyth from "../../components/DebunkedMyth";
 import SocialLinks from "../../components/SocialLinks";
 import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 export default function MythPage() {
-	let params = useParams();
-	const [myth, setMyth] = useState();
-	//console.log(params);
-	useEffect(()=> {
-		async function loadMyth(slug) {
-			const loadedMyth = await getMyth(slug);
-			setMyth(loadedMyth);
-			//console.log(loadedMyth);
-		}
-		loadMyth(params.slug);
-	},[params.slug])
+	const { singleMyth }: { singleMyth: Myth } = useLoaderData();
+
 	return (
 		<div className="min-h-screen flex flex-col">
 			<div className="flex-1 flex items-center justify-center">
 				<div className="w-full max-w-200">
-					{ myth &&
-						<DebunkedMyth debunkedMyth={myth} />
+					{singleMyth &&
+						<DebunkedMyth debunkedMyth={singleMyth} />
 					}
 					<Link to="/the-answer/" className="solution-link italic font-bold cursor-pointer">
 						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Answer?</span> <span className="answer-link"> The Answers Already Exist →</span></h1>

@@ -5,4 +5,5 @@ export interface Myth {
 	slug?: string;
 	image?: string;
 	learn_more?: string;
+	moreinfo?: string;
 }

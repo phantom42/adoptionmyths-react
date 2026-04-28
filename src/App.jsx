@@ -21,6 +21,7 @@ const router = createBrowserRouter([
 			{
 				path: "myth/:slug",
 				element: <MythPage />,
+				loader: MythLoader,
 			},
 			{
 				path: "myth",

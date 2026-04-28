@@ -1,6 +1,6 @@
 import { getRandomMyth } from "../../api/queries/getRandomMyth";
-
-export async function randomMythLoader() {
+import { Myth } from "@/types/myth";
+export async function randomMythLoader(): Promise<{randomMyth: Myth}> {
 	const randomMyth  = await getRandomMyth();
 	
 	return {
