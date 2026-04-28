@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-console.log(import.meta.env.MODE);
 export default function Root(){
 	return (
 		<div>
