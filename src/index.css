@@ -68,7 +68,7 @@ h2 {
 	margin: 1em 0em;
 	border-radius: 0 4px 4px 0;
 }
-.mythbox {
+.mythbox, .errorbox {
 	border-radius: 4px;
 	border-left: none;
 }

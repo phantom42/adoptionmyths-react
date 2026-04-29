@@ -6,12 +6,14 @@ import { getRandomMythListLoader } from './pages/RandomMyth/randomMythListLoader
 import { MythLoader } from './pages/Myth/mythLoader';
 import Solution from './pages/Solution';
 import AllMyths from './pages/AllMyths/AllMyths';
+import ErrorPage from './pages/Error/ErrorPage';
 import { getAllMythsLoader } from './pages/AllMyths/allMythsLoader';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Root />,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				index:true,
@@ -57,6 +59,10 @@ const router = createBrowserRouter([
 				path: "solution",
 				element: <Solution />
 			},
+			{
+				path: 'error',
+				element: <ErrorPage />
+			}
 		]
 	}
 ])
