@@ -1,16 +1,83 @@
-# React + Vite
+# Adoption Myths — React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React/TypeScript frontend for [adoption-myths.com](https://adoption-myths.com) — a resource dedicated to addressing common misconceptions about adoption.
 
-Currently, two official plugins are available:
+**Live Site:** [adoption-myths.com](https://adoption-myths.com)  
+**API:** [adoptionmyths-api-node](https://github.com/phantom42/adoptionmyths-api-node)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Deployment:** Vercel
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Fetches a randomized myth list from the API on load, enabling consistent next/previous navigation across the full dataset
+- Main page displays a single random myth with previous/next navigation
+- "What's The Answer?" page with static content
+- Full myth listing page displaying all available myths
+- 🚧 Additional features in progress
+
+---
+
+## Project Structure
+
+```
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page-level components
+│   └── main.tsx        # App entry point
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- A running instance of the [Adoption Myths API](https://github.com/phantom42/adoptionmyths-api-node) (or use the live API)
+- An `X-API-Key` for API access
+
+### Installation
+
+```bash
+git clone https://github.com/phantom42/adoptionmyths-react.git
+cd adoptionmyths-react
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_API_URL=https://adoptionmyths-api-node.vercel.app
+VITE_API_KEY=your_api_key_here
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+---
+
+## Status
+
+This project is under active development. Current work is focused on expanding page content and improving the overall user experience.
+
+---
+
+## Related
+
+- [adoptionmyths-api-node](https://github.com/phantom42/adoptionmyths-api-node) — Node.js/Express/TypeScript API backend
