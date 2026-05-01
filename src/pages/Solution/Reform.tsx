@@ -3,6 +3,9 @@ export default function Reform() {
 		<article id="reform">
 			<header>Sensible Reform</header>
 			<section>
+				<li className="has-tooltip" data-tooltip="Closed adoptions don't have a definition. We want information, not necessarily access">No closed adoptions</li>
+				<li className="has-tooltip" data-tooltip="Unregulated custody transfers, aka `rehoming` bypasses all safeguards in place">No re-homing of adoptees</li>
+
 				<li className="has-tooltip" data-tooltip="The names of birth parents are falsified, and locations or dates may also be changed">No falsified birth certificates</li>
 				<li className="has-tooltip" data-tooltip="Only 16 states allow full access to the original, unmodified document">No loss of access to original records</li>
 				<li className="has-tooltip" data-tooltip="While loss of parental rights is sometimes needed, there is no need to be completely legally severed from the entire family">No severance from original families</li>
@@ -11,6 +14,8 @@ export default function Reform() {
 				<li className="has-tooltip" data-tooltip="Pre-birth matching places undue pressure on expectant parents and increases expectations of hopeful parents">No pre-birth matching</li>
 				<li className="has-tooltip" data-tooltip="Adoption agencies and hopeful parents weaponize the complex legal system to pressure expectant parents">Provided 3rd-party legal advocate for expectant parents</li>
 				<li className="has-tooltip" data-tooltip="There is an immense amount of corruption in international adoption. From ">No international adoptions</li>
+				<li className="has-tooltip" data-tooltip="Requirements for training or education for adoptive parents varies from state-to-state and agency-to-agency">Standard mandatory education and training for hopeful parents</li>
+				<li className="has-tooltip" data-tooltip="Adoptive parents should not be allowed to change a child's name unless there is a compelling and necessary reason. If the adoptee is old enough to know their name, their permission must be required">No first/middle name changes without approval of court and adoptee when capable</li>
 				<li className="has-tooltip" data-tooltip="Tax-breaks and refunds contribute to the commodification of children and directs financial aid to the wrong people">No tax breaks for adopting</li>
 				<li className="has-tooltip" data-tooltip="In order to acquire infants, the $30 billion industry preys on vulnerable people in crisis and commodifies children">No private for-profit adoption industry</li>
 				<li className="has-tooltip" data-tooltip="Some states allow parents to relinquish immediately after birth, when many new parents are still on painkillers and dealing with post-partum ">Standardized waiting periods after birth</li>
