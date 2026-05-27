@@ -6,7 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig(({command, mode}) => {
 	const env = loadEnv(mode, process.cwd(), '');
 	return {
-
 		plugins: [react(), tailwindcss()],
 		server: {
 			port: 5173,
@@ -16,6 +15,11 @@ export default defineConfig(({command, mode}) => {
 					changeOrigin: true
 				}
 			}
+		},
+		test: {
+			environment: 'jsdom',
+			globals: true,
+			setupFiles: './src/test/setup.ts',
 		}
 	}
 })

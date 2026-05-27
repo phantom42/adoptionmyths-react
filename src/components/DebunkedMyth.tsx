@@ -3,18 +3,18 @@ import Myth from "./Myth";
 import { Link } from "react-router-dom";
 import { Myth as MythType } from "@/types/myth";
 
-interface DebunkedMythProps {
+export interface DebunkedMythProps {
 	debunkedMyth: MythType;
 	nextMyth?: (e?: React.MouseEvent) => void;
 	prevMyth?: (e?: React.MouseEvent) => void;
 	displayNext?: boolean;
 }
 
-export default function DebunkedMyth({ debunkedMyth, nextMyth = () => {}, prevMyth = () => {}, displayNext = true }: DebunkedMythProps) {
+export default function DebunkedMyth({ debunkedMyth, nextMyth = () => { }, prevMyth = () => { }, displayNext = true }: DebunkedMythProps) {
 	return (
-		<article className="box mythbox" style={{padding: '2em'}}>
-			<Myth myth={debunkedMyth.myth} slug={debunkedMyth.slug ?? debunkedMyth._id}/>
-			<Fact fact={debunkedMyth.fact}/>
+		<article className="box mythbox" style={{ padding: '2em' }}>
+			<Myth myth={debunkedMyth.myth} slug={debunkedMyth.slug ?? debunkedMyth._id} />
+			<Fact fact={debunkedMyth.fact} />
 			<div className="flex justify-between items-center pt-5">
 
 				{debunkedMyth?.moreinfo ? (
@@ -23,7 +23,7 @@ export default function DebunkedMyth({ debunkedMyth, nextMyth = () => {}, prevMy
 						target="_blank"
 						rel="noopener noreferrer"
 						className="italic font-bold cursor-pointer"
-						style={{color: 'var(--box-text-color)'}}
+						style={{ color: 'var(--box-text-color)' }}
 						onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
 						onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
 					>
@@ -32,28 +32,28 @@ export default function DebunkedMyth({ debunkedMyth, nextMyth = () => {}, prevMy
 				) : <span />}
 			</div>
 			<div className="flex justify-between items-center pt-5">
-				{displayNext && 
-				<Link
-				to="/"
-				onClick={prevMyth}
-				className="italic font-bold cursor-pointer"
-				style={{color: 'var(--box-text-color)'}}
-				onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
-				onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
-			>
-				← Previous Myth 
-			</Link>}
-				{displayNext && 
-				<Link
-					to="/"
-					onClick={nextMyth}
-					className="italic font-bold cursor-pointer"
-					style={{color: 'var(--box-text-color)'}}
-					onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
-					onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
-				>
-					Debunk another myth →
-				</Link>
+				{displayNext &&
+					<Link
+						to="/"
+						onClick={prevMyth}
+						className="italic font-bold cursor-pointer"
+						style={{ color: 'var(--box-text-color)' }}
+						onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
+						onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
+					>
+						← Previous Myth
+					</Link>}
+				{displayNext &&
+					<Link
+						to="/"
+						onClick={nextMyth}
+						className="italic font-bold cursor-pointer"
+						style={{ color: 'var(--box-text-color)' }}
+						onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
+						onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
+					>
+						Debunk another myth →
+					</Link>
 				}
 			</div>
 		</article>

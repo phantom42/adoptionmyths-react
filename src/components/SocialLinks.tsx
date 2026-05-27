@@ -5,9 +5,9 @@ interface IProps {
 	displayDebunk?: boolean
 }
 export default function SocialLinks({ displayDebunk = false }: IProps) {
-	const links = <><a href="https://facebook.com/phantomadoptee" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-		<a href="https://instagram.com/phantomadoptee" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-		<a href="https://tiktok.com/@phantomadoptee" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+	const links = <><a href="https://facebook.com/phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="Facebook Link"><FaFacebook /></a>
+		<a href="https://instagram.com/phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="Instagram Link"><FaInstagram /></a>
+		<a href="https://tiktok.com/@phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="TikTok Link"><FaTiktok /></a>
 		<span className="credit">@phantomAdoptee</span></>
 	return (
 		<>

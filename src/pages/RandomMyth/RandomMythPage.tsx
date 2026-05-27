@@ -33,7 +33,6 @@ export default function RandomMythPage() {
 		}, import.meta.env.VITE_AUTOADVANCE_DELAY_SECONDS * 1000);
 		return () => clearTimeout(timer);
 	});
-
 	const randomMyth = randomMythList[mythIndex];
 	return (
 		<div className="min-h-screen flex flex-col">

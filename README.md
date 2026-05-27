@@ -13,6 +13,7 @@ A React/TypeScript frontend for [adoption-myths.com](https://adoption-myths.com)
 - **Language:** TypeScript
 - **Build Tool:** Vite
 - **Deployment:** Vercel
+- **Testing:** Vitest + React Testing Library
 
 ---
 
@@ -30,8 +31,12 @@ A React/TypeScript frontend for [adoption-myths.com](https://adoption-myths.com)
 
 ```
 ├── src/
+│   ├── api/
+│   │   └── queries/    # API query functions (fetch wrappers)
 │   ├── components/     # Reusable UI components
 │   ├── pages/          # Page-level components
+│   ├── test/
+│   │   └── setup.ts    # Vitest global test setup
 │   └── main.tsx        # App entry point
 ```
 
@@ -69,6 +74,30 @@ npm run dev
 ```
 
 The app will be available at `http://localhost:5173`.
+
+---
+
+## Testing
+
+Unit tests are written with [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+
+### Test Coverage
+
+- **Components:** `Fact`, `Myth`, `DebunkedMyth`, `SocialLinks`
+- **Pages:** `RandomMythPage`, `AllMyths`, `MythPage`
+- **API queries:** `getAllMyths`, `getMyth`, `getRandomMyth`, `getRandomListOfMyths`
+
+### Run Tests
+
+```bash
+# Run all tests (watch mode)
+npm test
+
+# Run with interactive UI
+npm run test:ui
+```
+
+Tests use `jsdom` as the environment, `vi.mock` for module and `fetch` mocking, and `MemoryRouter` for components that use React Router links.
 
 ---
 
