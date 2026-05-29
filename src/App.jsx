@@ -2,12 +2,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import RandomMythPage from './pages/RandomMyth/RandomMythPage';
 import MythPage from './pages/Myth/MythPage';
+import BetterLife from './pages/BetterLife/BetterLife';
 import { getRandomMythListLoader } from './pages/RandomMyth/randomMythListLoader';	
 import { MythLoader } from './pages/Myth/mythLoader';
 import Solution from './pages/Solution';
 import AllMyths from './pages/AllMyths/AllMyths';
 import ErrorPage from './pages/Error/ErrorPage';
 import { getAllMythsLoader } from './pages/AllMyths/allMythsLoader';
+import getBetterLifeLoader from './pages/BetterLife/BetterLifeLoader';
 
 const router = createBrowserRouter([
 	{
@@ -58,6 +60,26 @@ const router = createBrowserRouter([
 			{
 				path: "solution",
 				element: <Solution />
+			},
+			{
+				path: "betterlife",
+				element: <BetterLife />,
+				loader: getBetterLifeLoader
+			},
+			{
+				path: "better-life",
+				element: <BetterLife />,
+				loader: getBetterLifeLoader
+			},
+			{
+				path: "adoptionmeansabetterlife",
+				element: <BetterLife />,
+				loader: getBetterLifeLoader
+			},
+			{
+				path: "adoption-means-a-better-life",
+				element: <BetterLife />,
+				loader: getBetterLifeLoader
 			},
 			{
 				path: 'error',

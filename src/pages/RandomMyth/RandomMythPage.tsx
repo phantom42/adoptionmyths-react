@@ -39,7 +39,7 @@ export default function RandomMythPage() {
 			<div className="flex-1 flex items-center justify-center">
 				<div className="w-full max-w-200">
 					<DebunkedMyth debunkedMyth={randomMyth} nextMyth={nextMyth} prevMyth={prevMyth} />
-					<Link to="/the-answer/" className="solution-link italic font-bold cursor-pointer">
+					<Link to="/the-answer/" className="solution-link italic font-bold cursor-pointer link">
 						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Answer?</span> <span className="answer-link"> →</span></h1>
 					</Link>
 				</div>

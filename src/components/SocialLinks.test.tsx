@@ -15,7 +15,7 @@ async function renderComponent(displayDebunk: Boolean = false): Promise<void> {
 }
 
 
-const links: string[] = ['facebook', 'instagram', 'tiktok'];
+const links: string[] = ['facebook', 'instagram', 'tiktok', '@phantomadoptee'];
 
 describe('renders the social links correctly, displayDebunk = false', () => {
 	beforeEach(() => {

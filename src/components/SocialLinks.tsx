@@ -8,7 +8,7 @@ export default function SocialLinks({ displayDebunk = false }: IProps) {
 	const links = <><a href="https://facebook.com/phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="Facebook Link"><FaFacebook /></a>
 		<a href="https://instagram.com/phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="Instagram Link"><FaInstagram /></a>
 		<a href="https://tiktok.com/@phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="TikTok Link"><FaTiktok /></a>
-		<span className="credit">@phantomAdoptee</span></>
+		<a href="https://phantomadoptee.com" target="_blank" className="credit" rel="noopener noreferrer" aria-label="@phantomAdoptee">@phantomAdoptee</a></>
 	return (
 		<>
 			{displayDebunk &&

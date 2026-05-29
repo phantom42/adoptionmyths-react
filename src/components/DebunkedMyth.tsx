@@ -30,6 +30,13 @@ export default function DebunkedMyth({ debunkedMyth, nextMyth = () => { }, prevM
 						Learn more about this fact
 					</a>
 				) : <span />}
+
+				<Link
+					to="/better-life/"
+					className="italic font-bold cursor-pointer"
+					onMouseEnter={e => e.currentTarget.style.color = 'var(--main-text-highlight)'}
+					onMouseLeave={e => e.currentTarget.style.color = 'var(--box-text-color)'}
+				>Nonsense! Adoption means a better life!</Link>
 			</div>
 			<div className="flex justify-between items-center pt-5">
 				{displayNext &&

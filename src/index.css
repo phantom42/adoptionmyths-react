@@ -247,3 +247,38 @@ li::marker{
 .has-tooltip:hover, .has-tooltip:active  {
 	cursor: pointer;
 }
+.drop {
+	background-color: var(--box-background);
+	padding: var(--box-padding);
+	
+	color: var(--box-text-color);
+	margin: 1em 0em;
+	border-radius: 10px;
+}
+.drop > p {
+	padding: 1em;
+}
+.drop-header {
+	background-color: var(--box-background);
+	padding: 1em;
+	border-radius: 5px;
+}
+.drop-link {
+	color: var(--main-text-highlight);
+}
+.drop-link:hover,
+.drop-link:hover span {
+	color: white;
+}
+a {
+	transition: color .2s ease;
+}
+#headline.drop-headline p em {
+	color: var(--box-text-highlight);
+	font-weight: bold;
+	font-style: italic;
+}
+.search-box {
+	background-color: var(--box-background);
+	color: var(--main-text-color);
+}
