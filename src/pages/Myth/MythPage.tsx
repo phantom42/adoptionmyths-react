@@ -13,8 +13,8 @@ export default function MythPage() {
 					{singleMyth &&
 						<DebunkedMyth debunkedMyth={singleMyth} />
 					}
-					<Link to="/the-answer/" className="solution-link italic font-bold cursor-pointer link">
-						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Answer?</span> <span className="answer-link"> The Answers Already Exist →</span></h1>
+					<Link to="/the-solution/" className="solution-link italic font-bold cursor-pointer link">
+						<h1 className="font-serif text-3xl">So What's <span className="text-highlight-500 italic">The Solution?</span> <span className="answer-link"> The Answers Already Exist →</span></h1>
 					</Link>
 				</div>
 			</div>
