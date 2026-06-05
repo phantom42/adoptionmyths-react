@@ -12,7 +12,7 @@ import AllMyths from './pages/AllMyths/AllMyths';
 import ErrorPage from './pages/Error/ErrorPage';
 import { getAllMythsLoader } from './pages/AllMyths/allMythsLoader';
 import getBetterLifeLoader from './pages/BetterLife/BetterLifeLoader';
-import {getAdminLoader} from './pages/Admin/adminLoader';
+// import {getAdminLoader} from './pages/Admin/adminLoader';
 
 
 const router = createBrowserRouter([
@@ -85,11 +85,11 @@ const router = createBrowserRouter([
 				element: <BetterLife />,
 				loader: getBetterLifeLoader
 			},
-			{
-				path: "admin",
-				element: <AdminPage />,
-				loader: getAdminLoader
-			},
+			// {
+			// 	path: "admin",
+			// 	element: <AdminPage />,
+			// 	loader: getAdminLoader
+			// },
 			{
 				path: "submit-myth",
 				element: <SubmitPage />
