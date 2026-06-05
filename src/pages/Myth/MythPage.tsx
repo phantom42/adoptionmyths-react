@@ -1,6 +1,7 @@
 import { Myth } from "@/types/myth";
 import DebunkedMyth from "../../components/DebunkedMyth";
 import SocialLinks from "../../components/SocialLinks";
+import SubmitLink from "../../components/SubmitLink";
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 export default function MythPage() {
@@ -8,6 +9,7 @@ export default function MythPage() {
 
 	return (
 		<div className="min-h-screen flex flex-col">
+			<SubmitLink />
 			<div className="flex-1 flex items-center justify-center">
 				<div className="w-full max-w-200">
 					{singleMyth &&

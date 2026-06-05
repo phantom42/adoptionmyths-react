@@ -9,6 +9,11 @@ export default function SocialLinks({ displayDebunk = false }: IProps) {
 		<a href="https://instagram.com/phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="Instagram Link"><FaInstagram /></a>
 		<a href="https://tiktok.com/@phantomadoptee" target="_blank" rel="noopener noreferrer" aria-label="TikTok Link"><FaTiktok /></a>
 		<a href="https://phantomadoptee.com" target="_blank" className="credit" rel="noopener noreferrer" aria-label="@phantomAdoptee">@phantomAdoptee</a></>
+	const submitLink = (
+		<Link to="/submit-myth" className="italic font-bold cursor-pointer hover:text-(--main-text-highlight) transition-colors duration-200">
+			Submit a myth
+		</Link>
+	)
 	return (
 		<>
 			{displayDebunk &&
@@ -17,12 +22,14 @@ export default function SocialLinks({ displayDebunk = false }: IProps) {
 						<FaArrowLeft /> Debunk a myth
 					</Link>
 					<div className="flex items-center gap-4">
+						{submitLink}
 						{links}
 					</div>
 				</div>
 			}
 			{!displayDebunk &&
 				<div className="flex items-center justify-end gap-4 mt-4 social-links">
+					{submitLink}
 					{links}
 				</div>
 			}

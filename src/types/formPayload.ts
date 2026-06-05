@@ -1,12 +1,12 @@
-export interface Myth {
-	_id: string;
+export interface formPayload {
 	myth: string;
 	fact: string;
-	slug?: string;
-	image?: string;
 	learn_more?: string;
-	moreinfo?: string;
+	moreInfo?: string;
 	submitted_by?: string;
 	email_address?: string;
+	validationToken: string;
+	_id?: string;
 	active?: boolean;
+	slug?: string;
 }

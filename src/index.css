@@ -13,6 +13,7 @@
 	--box-padding: 1em;
 	--box-text-color: #9090b8;
 	--box-text-highlight: #c5c5e0;
+	--form-input: #c5c5e050;
 	--border-color: #e8855a;
 	--main-font: "Libre Franklin", sans-serif;
 	--fancy-font: 'DM Serif Display', serif;
@@ -30,6 +31,7 @@
 		--box-background: #c8c3bb;
 		--box-text-color: #4a4a6a;
 		--box-text-highlight: #2e2e50;
+		--form-input: #2e2e5050;
 		--border-color: #c2622a;
 		--color-main-500: #3a3a5c;
 	}
@@ -68,7 +70,7 @@ h2 {
 	margin: 1em 0em;
 	border-radius: 0 4px 4px 0;
 }
-.mythbox, .errorbox {
+.mythbox, .errorbox, .form.box {
 	border-radius: 4px;
 	border-left: none;
 }
@@ -281,4 +283,24 @@ a {
 .search-box {
 	background-color: var(--box-background);
 	color: var(--main-text-color);
+}
+
+.form input, textarea {
+	background-color: var(--form-input);
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: var(--main-text-color);
+}
+.form textarea {
+	min-height: 150px;
+}
+.form.box {
+
+}
+.field label {
+	min-width: 100px
+}
+legend {
+	font-style: bold;
 }

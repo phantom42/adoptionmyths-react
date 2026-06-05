@@ -14,7 +14,6 @@ async function renderComponent(displayDebunk: Boolean = false): Promise<void> {
 	);
 }
 
-
 const links: string[] = ['facebook', 'instagram', 'tiktok', '@phantomadoptee'];
 
 describe('renders the social links correctly, displayDebunk = false', () => {
@@ -38,6 +37,11 @@ describe('renders the social links correctly, displayDebunk = false', () => {
 			name: /Debunk a myth/i
 		})
 		expect(debunkLink).not.toBeInTheDocument();
+	})
+	it('does render a link to myth submission', () => {
+		const submitLink = screen.queryByRole('link', {
+			name: /submit a myth/i
+		})
 	})
 })
 describe('renders correctly without displaydebug', () => {

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import DebunkedMyth from "../../components/DebunkedMyth";
 import SocialLinks from "../../components/SocialLinks";
+import SubmitLink from "../../components/SubmitLink";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Myth } from "@/types/myth";
@@ -36,6 +37,7 @@ export default function RandomMythPage() {
 	const randomMyth = randomMythList[mythIndex];
 	return (
 		<div className="min-h-screen flex flex-col">
+			<SubmitLink />
 			<div className="flex-1 flex items-center justify-center">
 				<div className="w-full max-w-200">
 					<DebunkedMyth debunkedMyth={randomMyth} nextMyth={nextMyth} prevMyth={prevMyth} />

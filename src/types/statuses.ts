@@ -1,0 +1,5 @@
+export const STATUSES = {
+	OK: "OK",
+	SUBMITTING: "SUBMITTING",
+	COMPLETE: "COMPLETE"
+}
