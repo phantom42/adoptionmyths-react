@@ -4,7 +4,7 @@ import RandomMythPage from './pages/RandomMyth/RandomMythPage';
 import MythPage from './pages/Myth/MythPage';
 import BetterLife from './pages/BetterLife/BetterLife';
 import SubmitPage from './pages/Submit/SubmitPage';
-import AdminPage from './pages/Admin/AdminPage';
+// import AdminPage from './pages/Admin/AdminPage';
 import { getRandomMythListLoader } from './pages/RandomMyth/randomMythListLoader';	
 import { MythLoader } from './pages/Myth/mythLoader';
 import Solution from './pages/Solution';
